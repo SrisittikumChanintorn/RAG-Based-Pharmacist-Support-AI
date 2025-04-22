@@ -92,13 +92,13 @@ This project addresses the limitations of general-purpose LLMs by integrating th
     * Type "q", "quit", or "exit" in the input field to close the application.
 
 ## Project Structure
+   This project select python version  3.11.6 
 
  ```bash
 
-.
 ├── main.py                 # The main Python script containing the application logic
-├── ข้อมูลยา 50 ชนิด.pdf    # The PDF file containing the drug information
-├── README.md             # This README file
+├── ข้อมูลยา 50 ชนิด.pdf      # The PDF file containing the drug information
+├── README.md               # This README file
 └── requirements.txt        # List of Python dependencies
 
 ```
