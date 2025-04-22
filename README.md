@@ -92,7 +92,7 @@ This project addresses the limitations of general-purpose LLMs by integrating th
     * Type "q", "quit", or "exit" in the input field to close the application.
 
 ## Project Structure
-   This project select python version  3.11.6 
+   This project select python version  3.11.6 as a interpreter
 
  ```bash
 
