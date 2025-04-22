@@ -93,12 +93,15 @@ This project addresses the limitations of general-purpose LLMs by integrating th
 
 ## Project Structure
 
+ ```bash
+
 .
 ├── main.py                 # The main Python script containing the application logic
 ├── ข้อมูลยา 50 ชนิด.pdf    # The PDF file containing the drug information
 ├── README.md             # This README file
 └── requirements.txt        # List of Python dependencies
 
+```
 
 ## Future Enhancements
 
