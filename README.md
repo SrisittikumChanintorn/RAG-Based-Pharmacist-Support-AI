@@ -1,8 +1,8 @@
 # Pharmacist Assistant AI (Thai Language)
 
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Python Version](https://img.shields.io/badge/Python-3.7+-blue.svg)
-![Langchain Version](https://img.shields.io/badge/Langchain-0.1.x-brightgreen.svg)
+![Python Version](https://img.shields.io/badge/Python-3.11.6-blue.svg)
+![Langchain Version](https://img.shields.io/badge/Langchain-0.3.x-brightgreen.svg)
 ![Anthropic Claude Version](https://img.shields.io/badge/Anthropic%20Claude-3.5%20Sonnet-orange.svg)
 ![OpenAI Embeddings](https://img.shields.io/badge/OpenAI%20Embeddings-text--embedding--ada--002-lightgrey.svg)
 
@@ -43,23 +43,31 @@ This project addresses the limitations of general-purpose LLMs by integrating th
 2.  **Install the required Python packages:**
     Create a `requirements.txt` file in the repository root with the following content:
     ```
-    langchain
-    langchain_community
-    langchain_anthropic
-    langchain_openai
-    pymupdf
-    tiktoken
-    chromadb
+    langchain_community==0.3.21    
+    langchain_openai==0.3.12        
+    langchain-anthropic==0.3.10    
+    anthropic==0.49.0            
+    pymupdf==1.25.5               
+    chromadb==0.5.3            
+    openai==1.68.2                 
+    tiktoken==0.7.0                 
+    pydantic==2.7.4                
+    SQLAlchemy==2.0.40             
+    PyYAML==6.0.0                  
+    tenacity==9.1.2                
+    requests==2.31.0                
+    numpy==1.26.2                  
     ```
     Then, install the dependencies using pip:
+    
     ```bash
     pip install -r requirements.txt
     ```
 
-3.  **Place the PDF knowledge base:**
+4.  **Place the PDF knowledge base:**
     Ensure that the PDF file containing the drug information, named `ข้อมูลยา 50 ชนิด.pdf`, is located in the same directory as the Python script.
 
-4.  **Set up API Keys:**
+5.  **Set up API Keys:**
     You need to have API keys for both Anthropic and OpenAI. Set these as environment variables before running the application.
     ```bash
     export ANTHROPIC_API_KEY="YOUR_ANTHROPIC_API_KEY"
