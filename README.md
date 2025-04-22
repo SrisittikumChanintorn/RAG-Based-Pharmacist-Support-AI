@@ -67,13 +67,25 @@ This project addresses the limitations of general-purpose LLMs by integrating th
 4.  **Place the PDF knowledge base:**
     Ensure that the PDF file containing the drug information, named `ข้อมูลยา 50 ชนิด.pdf`, is located in the same directory as the Python script.
 
+    
+
 5.  **Set up API Keys:**
     You need to have API keys for both Anthropic and OpenAI. Set these as environment variables before running the application.
     ```bash
-    export ANTHROPIC_API_KEY="YOUR_ANTHROPIC_API_KEY"
-    export OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
+    # Ensure API keys are set in environment before running
+    os.environ.setdefault(
+        "ANTHROPIC_API_KEY",
+        "YOUR_ANTHROPIC_API_KEY",
+    )
+    os.environ.setdefault(
+        "OPENAI_API_KEY",
+        "YOUR_OPENAI_API_KEY",
+    )
+
     ```
     *(Replace `"YOUR_ANTHROPIC_API_KEY"` and `"YOUR_OPENAI_API_KEY"` with your actual API keys.)*
+
+
 
 ## Usage
 
