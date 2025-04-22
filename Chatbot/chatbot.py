@@ -14,6 +14,10 @@ from langchain_community.vectorstores import Chroma
 PDF_PATH = "ข้อมูลยา 50 ชนิด.pdf"
 MODEL_NAME = "claude-3-5-sonnet-20240620"
 MODEL_MAX_TOKENS = 1024
+CHUNK_SIZE = 1000
+CHUNK_OVERLAP = 0
+
+
 
 # Ensure API keys are set in environment before running
 os.environ.setdefault(
@@ -25,8 +29,7 @@ os.environ.setdefault(
     "YOUR_OPENAI_API_KEY",
 )
 
-
-
+# Load and split PDF documents
 def load_documents(pdf_path: str) -> list:
     """
     Load and split PDF file into document chunks.
@@ -39,13 +42,13 @@ def load_documents(pdf_path: str) -> list:
     raw_docs = loader.load_and_split()
     splitter = CharacterTextSplitter(
         separator="\n\n",
-        chunk_size=1000,
-        chunk_overlap=0,
+        chunk_size=CHUNK_SIZE,
+        chunk_overlap=CHUNK_OVERLAP,
     )
     return splitter.split_documents(raw_docs)
 
 
-
+# Create a conversational retrieval chain using the Anthropic Claude model
 def build_retrieval_chain(docs: list) -> ConversationalRetrievalChain:
     """
     Create a conversational retrieval chain using Anthropic Claude model.
@@ -74,10 +77,7 @@ def build_retrieval_chain(docs: list) -> ConversationalRetrievalChain:
         combine_docs_chain_kwargs={"prompt": prompt_template},
     )
 
-
-
-
-
+# Launch the GUI for user interaction
 def launch_gui(chain: ConversationalRetrievalChain) -> None:
     """
     Initialize and run the Tkinter GUI for user interaction.
@@ -209,7 +209,7 @@ def launch_gui(chain: ConversationalRetrievalChain) -> None:
 
 
 
-
+# Main function to load documents, build retrieval chain, and launch GUI
 def main() -> None:
     """
     Main entry point for the application.
