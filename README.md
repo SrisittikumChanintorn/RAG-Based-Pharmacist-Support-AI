@@ -85,7 +85,11 @@ This project addresses the limitations of general-purpose LLMs by integrating th
     ```
     *(Replace `"YOUR_ANTHROPIC_API_KEY"` and `"YOUR_OPENAI_API_KEY"` with your actual API keys.)*
 
+6. Start Chatbot ▶️
 
+```bash
+python main.py
+```
 
 ## Usage
 
