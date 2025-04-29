@@ -85,11 +85,6 @@ This project addresses the limitations of general-purpose LLMs by integrating th
     ```
     *(Replace `"YOUR_ANTHROPIC_API_KEY"` and `"YOUR_OPENAI_API_KEY"` with your actual API keys.)*
 
-6. Start Chatbot ▶️
-
-```bash
-python main.py
-```
 
 ## Usage
 
@@ -142,7 +137,3 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 * Anthropic for the Claude language model.
 * OpenAI for the text embedding model.
 * The developers of PyMuPDF and ChromaDB for their excellent libraries.
-
----
-
-**Developed with passion for empowering pharmacists.**
